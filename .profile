@@ -9,5 +9,4 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
-export VISUAL=pico
-export EDITOR="$VISUAL"
+export PATH="$PATH:/Applications/DevDesktop/tools"
