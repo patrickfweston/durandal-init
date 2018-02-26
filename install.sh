@@ -99,6 +99,7 @@ echo "Setting up your preference files."
 cp .gitconfig ~/.gitconfig
 cp .gitignore_global ~/.gitignore_global
 cp .profile ~/.profile
+cp .bash_profile ~/.bash_profile
 
 # Get git things
 curl -o /usr/local/etc/bash_completion.d/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
