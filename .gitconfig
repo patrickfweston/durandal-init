@@ -1,33 +1,19 @@
+[user]
+	name = Patrick Weston
+	email = patrickfweston@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
 [core]
-	excludesfile = /Users/avischwab/.gitignore_global
+	excludesfile = /Users/patrick/.gitignore
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Users/patrick/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[user]
-	name = Avi Schwab
-	email = schwab@palantir.net
-[credential]
-	helper = osxkeychain
 [commit]
-	template = /Users/avischwab/.stCommitMsg
-[color]
-    branch = auto
-    diff = auto
-    status = auto
-# Via https://gist.github.com/trey/2722934
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+	template = /Users/patrick/.stCommitMsg
+[alias]
+	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
